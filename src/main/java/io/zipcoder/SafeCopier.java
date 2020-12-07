@@ -8,7 +8,7 @@ import java.util.concurrent.locks.*;
  */
 public class SafeCopier extends Copier {
 
-    private Lock lock = new ReentrantLock();
+    private Lock lock = new ReentrantLock(); // ReentrantLock() method allows you to call the lock method multiple times
 
 
     public SafeCopier(String toCopy) {
@@ -33,6 +33,6 @@ public class SafeCopier extends Copier {
         } finally {
             this.lock.unlock();
         }
-
     }
+    // https://www.youtube.com/watch?v=ahBC69_iyk4 explains why try and finally were used
 }

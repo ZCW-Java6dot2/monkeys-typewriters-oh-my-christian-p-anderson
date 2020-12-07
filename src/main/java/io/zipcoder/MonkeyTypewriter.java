@@ -36,7 +36,7 @@ public class MonkeyTypewriter {
     }
 
     for (Thread t : unsafeThreads) {
-        t.start();
+        t.start(); // this is how you start a thread
     }
 
     ArrayList<Thread> safeThreads = new ArrayList<>();
