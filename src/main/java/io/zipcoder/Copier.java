@@ -13,6 +13,7 @@ public abstract class Copier implements Runnable {
 
     public Copier(String toCopy) {
         // Take the input string, split it on spaces, turn that array to an arraylist, and then grab its iterator.
+        // This will allow us to traverse the text to be copied and pass it along to each monkey (thread).
         this.stringIterator = Arrays.asList(toCopy.split(" ")).iterator();
         this.copied = "";
     }
